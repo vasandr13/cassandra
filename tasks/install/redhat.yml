@@ -1,0 +1,12 @@
+---
+
+- name: Configure Apache Cassandra YUM Repository
+  yum_repository:
+    name: cassandra
+    description: Apache Cassandra
+    baseurl: "{{ cassandra_repo }}"
+    gpgcheck: false
+    repo_gpgcheck: false
+    state: present
+  when:
+    - cassandra_configure_repo|bool
