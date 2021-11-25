@@ -1,0 +1,7 @@
+---
+
+cassandra_configure_repo: False
+cassandra_service_enabled: yes
+cassandra_systemd_enabled: False
+cassandra_join_cluster: false
+
