@@ -1,12 +1,10 @@
 ---
 
-- name: "Install and Configure Cassandra"
+- name: "Install and Configure Cassandra Cluster"
 
   hosts: all
-
-#  vars:
-#    cassandra_configure_repo: true
-
+  
 
   roles:
+    - {jdk: }
     - {role: "cassandra", cassandra__action: "configure_repofile"}
