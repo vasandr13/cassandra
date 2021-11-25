@@ -1,0 +1,6 @@
+---
+
+- name: "{{ cassandra__action }}"
+  include: "{{ cassandra__action }}.yml"
+  
+  
