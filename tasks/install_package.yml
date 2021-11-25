@@ -4,11 +4,11 @@
   yum:
     name: "{{ cassandra_package }}"
     update_cache: true
+    state: present
   delay: "{{ cassandra_task_delay }}"
   retries: "{{ cassandra_task_retries }}"
-  state: present
   register: cassandra_yum_install_result
   until: cassandra_yum_install_result is succeeded
   when:
     - cassandra_install_packages|bool
-    - ansible_pkg_mgr == 'yum'
+
