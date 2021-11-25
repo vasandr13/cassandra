@@ -9,4 +9,4 @@
 
 
   roles:
-    - {role: "cassandra", cassandra_action: "configure_repo"}
+    - {role: "cassandra", cassandra_action: "configure_repofile"}
