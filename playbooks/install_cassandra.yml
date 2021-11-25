@@ -5,7 +5,7 @@
   hosts: all
 
   vars:
-    cassandra_configure_repo: true
+    cassandra_configure_repo: True
 
 
   roles:
