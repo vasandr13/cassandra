@@ -6,5 +6,6 @@
     update_cache: true
   delay: "{{ cassandra_task_delay }}"
   retries: "{{ cassandra_task_retries }}"
+  state: present
   register: cassandra_yum_install_result
   until: cassandra_yum_install_result is succeeded
