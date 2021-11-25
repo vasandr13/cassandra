@@ -8,5 +8,4 @@
     gpgcheck: false
     repo_gpgcheck: false
     state: present
-  when:
-    - cassandra_configure_repo|bool
+
