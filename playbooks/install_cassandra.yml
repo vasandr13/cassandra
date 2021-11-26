@@ -6,4 +6,4 @@
   
 
   roles:
-    - {role: "cassandra", cassandra__action: "configure_repofile"}
+    - {role: "cassandra", cassandra__action: "configure_repofile", cassandra__action: "install_packages.yml"}
