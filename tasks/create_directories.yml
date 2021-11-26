@@ -1,6 +1,6 @@
 ---
 
-- name: Create Custom Directories
+- name: Create Custom Directories for Cassandra
   file:
     group: "{{ directory.0.spec.group | default('cassandra') }}"
     mode: "{{ directory.0.spec.mode | default('0700') }}"
