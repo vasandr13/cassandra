@@ -1,0 +1,9 @@
+---
+
+- name: Configure Main Cassandra Configuration File configure.yml
+  template:
+    src: "{{ cassandra_configuration_templ }}"
+    dest: "{{ cassandra_configuration_file }}"
+    owner: root
+    group: root
+    mode: 0o644
