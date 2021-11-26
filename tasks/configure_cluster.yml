@@ -1,6 +1,6 @@
 ---
 
-- name: Configure Main Configuration File configure.yml
+- name: Configure Main Configuration File configure.yaml
   template:
     src: "{{ cassandra_configuration_template }}"
     dest: "{{ cassandra_configuration_file }}"
