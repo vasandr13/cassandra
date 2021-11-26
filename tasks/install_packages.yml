@@ -1,4 +1,4 @@
-- name: Install the Cassandra Package (YUM)
+- name: Install Cassandra RPM Package Using YUM
   # Retries are in this as the cache has been seen to still be updating when
   # this task gets to be executed.
   yum:
