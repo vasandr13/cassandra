@@ -1,0 +1,22 @@
+---
+
+galaxy_info:
+
+  author: "Andrey Vasilev"
+
+  description: "Ansible Role to Install and Configure Apache Cassandra."
+
+  role_name: cassandra
+
+  github_branch: main
+
+  galaxy_tags:
+    - cassandra
+    - centos
+
+  platforms:
+    - name: EL
+      versions:
+        - 7
+
+  dependencies: []
