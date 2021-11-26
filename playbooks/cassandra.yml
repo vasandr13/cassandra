@@ -7,7 +7,7 @@
   vars:
     cassandra_configuration:
       commitlog_directory: /commitlog/cassandra/commitlog
-      data_file_directories: /data/cassandra/data
+      data_file_directory: /data/cassandra/data
       hints_directory: /data/cassandra/hints
       saved_caches_directory: /data/cassandra/saved_caches
       
