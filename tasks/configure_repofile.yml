@@ -9,4 +9,4 @@
     repo_gpgcheck: false
     state: present
   when:
-    - cassandra_configure_apache_repo|bool
+    - cassandra_configure_repo|bool
