@@ -1,0 +1,36 @@
+---
+
+- name: "Install and Configure Cassandra Cluster"
+
+  hosts: all
+  
+  vars:
+    cassandra_configuration:
+      commitlog_directory: /commitlog/cassandra/commitlog
+      data_file_directories: /data/cassandra/data
+      hints_directory: /data/cassandra/hints
+      saved_caches_directory: /data/cassandra/saved_caches
+      
+    cassandra_directories:
+      root:
+        group: root
+        mode: "0755"
+        owner: root
+        paths:
+          - /data
+          - /commitlog
+      data:
+        paths:
+          - /data/cassandra
+          - /data/cassandra/data
+          - /data/cassandra/hints
+          - /data/cassandra/saved_caches
+      commitlog:
+        paths:
+          - /commitlog/cassandra
+          - /commitlog/cassandra/commitlog
+        
+
+  roles:
+    - {role: "cassandra", cassandra__action: "configure_repofile"}
+    - {role: "cassandra", cassandra__action: "install_packages"}
