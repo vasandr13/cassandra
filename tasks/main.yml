@@ -1,7 +1,8 @@
 ---
 
-- include_tasks: configure_repofile.yml
-
-- include_tasks: install_packages.yml
+- name: "{{ cassandra__action }}"
+  include: "{{ cassandra__action }}.yml"
+  
+  
 
   
