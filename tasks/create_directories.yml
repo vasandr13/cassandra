@@ -1,1 +1,16 @@
+---
 
+- name: Create Custom Directories
+  file:
+    group: "{{ directory.0.spec.group | default('cassandra') }}"
+    mode: "{{ directory.0.spec.mode | default('0700') }}"
+    owner: "{{ directory.0.spec.owner | default('cassandra') }}"
+    path: "{{ directory.1 }}"
+    state: directory
+  loop: "{{ cassandra_directories
+            | dict2items(key_name='set', value_name='spec')
+            | subelements('spec.paths') }}"
+  loop_control:
+    loop_var: directory
+  when:
+    - cassandra_directories is defined
