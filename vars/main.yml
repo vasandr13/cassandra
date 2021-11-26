@@ -2,4 +2,5 @@
 
 cassandra_role_version: 1.0.0
 cassandra_repo: http://centos-s-2vcpu-4gb-nyc1-01
+cassandra_configuration_directory: /etc/cassandra/default.conf
 cassandra_configuration_file: /etc/cassandra/default.conf/cassandra.yaml
