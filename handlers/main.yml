@@ -1,6 +1,6 @@
 ---
 
-- name: cassandra_restart_service
+- name: Cassandra Service Restart
   service:
     name: cassandra
     state: restarted
