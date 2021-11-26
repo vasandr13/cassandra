@@ -6,6 +6,10 @@ cassandra_install_packages: True
 cassandra_package: cassandra
 cassandra_task_delay: 10
 cassandra_task_retries: 5
+cassandra_service_enabled: yes
+cassandra_service_restart: True
+cassandra_service_state: started
+
 
 
 
