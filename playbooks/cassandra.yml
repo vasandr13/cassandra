@@ -66,5 +66,6 @@
     - {role: "cassandra", cassandra__action: "configure_repofile"}
     - {role: "cassandra", cassandra__action: "install_packages"}
     - {role: "cassandra", cassandra__action: "create_directories"}
-    - {role: "cassandra", cassandra__action: "configure_cluster"}    
+    - {role: "cassandra", cassandra__action: "configure_cluster"}
+    - {role: "cassandra", cassandra__action: "service"}    
     
