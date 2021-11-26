@@ -1,2 +1,9 @@
 ---
 
+- name: cassandra_restart_service
+  service:
+    name: cassandra
+    state: restarted
+    enabled: "{{ cassandra_service_enabled }}"
+  when:
+    - cassandra_service_restart|bool
