@@ -1,6 +1,6 @@
 ---
 
-- name: Configure Apache Cassandra YUM Repository
+- name: Configure Cassandra YUM Repository File
   yum_repository:
     name: cassandra
     description: Apache Cassandra
