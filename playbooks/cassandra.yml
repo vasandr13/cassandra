@@ -11,6 +11,23 @@
       hints_directory: /data/cassandra/hints
       saved_caches_directory: /data/cassandra/saved_caches
       
+      cluster_name: columbia
+      commitlog_sync: periodic
+      commitlog_sync_period_in_ms: 10000
+      listen_address: "{{ ansible_default_ipv4.address }}"
+      num_tokens: 16
+      partitioner: org.apache.cassandra.dht.Murmur3Partitioner
+      
+      
+      seed_provider:
+        - class_name: "org.apache.cassandra.locator.SimpleSeedProvider"
+          parameters:
+            # This sets the seed to the first node in the Ansible group called
+            # cassandra.
+            - seeds: "{{ hostvars[groups['cassandra'][0]]['ansible_default_ipv4'].address }}"
+      start_native_transport: true
+      
+      
     cassandra_directories:
       root:
         group: root
