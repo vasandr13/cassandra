@@ -7,3 +7,5 @@
     owner: root
     group: root
     mode: 0o644
+  notify:
+    - cassandra_restart_service
