@@ -1,8 +1,8 @@
 ---
 
-- name: Configure Main Cassandra Configuration File configure.yml
+- name: Configure Main Configuration File configure.yml
   template:
-    src: "{{ cassandra_configuration_templ }}"
+    src: "{{ cassandra_configuration_template }}"
     dest: "{{ cassandra_configuration_file }}"
     owner: root
     group: root
