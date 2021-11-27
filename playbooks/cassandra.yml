@@ -1,5 +1,7 @@
 ---
 
+# https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/configuration/configCassandra_yaml.html#configCassandra_yaml__asterisks
+
 - name: "Install and Configure Cassandra Cluster"
 
   hosts: all
