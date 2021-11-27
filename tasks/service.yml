@@ -11,6 +11,8 @@
   notify:
     - cassandra_restart_service
 
+# https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/initialize/referenceStartCservice.html
+
 - name: Ensure the Service is in the Required State (RedHat)
   systemd:
     name: cassandra
