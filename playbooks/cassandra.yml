@@ -18,6 +18,7 @@
       commitlog_sync: periodic
       commitlog_sync_period_in_ms: 10000
       listen_address: "{{ ansible_default_ipv4.address }}"
+      rpc_address: "{{ ansible_default_ipv4.address }}"
       num_tokens: 16
       partitioner: org.apache.cassandra.dht.Murmur3Partitioner
       endpoint_snitch: SimpleSnitch
