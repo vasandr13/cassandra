@@ -20,3 +20,5 @@
     enabled: "{{ cassandra_service_enabled }}"
     daemon_reload: yes
     state: "{{ cassandra_service_state }}"
+    
+    
