@@ -1,5 +1,7 @@
 ---
 
+# Run this when main config file cassandra.yaml is updated
+
 - name: cassandra_restart_service
   service:
     name: cassandra
