@@ -2,7 +2,7 @@
 
 - name: Backup original main config file.
   copy:
-    src: /etc/cassandra/default.conf/cassandra.yml
-    dest: /etc/cassandra/default.conf/cassandra.backup.yml
+    src: /etc/cassandra/default.conf/cassandra.yaml
+    dest: /etc/cassandra/default.conf/cassandra.backup.yaml
     
     
