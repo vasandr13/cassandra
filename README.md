@@ -1,6 +1,6 @@
 # Role for Installing and Configuring Cassandra Cluster.
 
-# Original 
+# Forked from:
 
 https://github.com/locp/ansible-role-cassandra
 
