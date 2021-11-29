@@ -4,6 +4,8 @@
   copy:
     src: "{{ cassandra_configuration_file }}"
     dest: "{{ cassandra_configuration_file }}.backup"
+    remote_src: yes
+    force: yes
   when:
     - cassandra_backup_config|bool
     
