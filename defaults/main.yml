@@ -19,7 +19,9 @@ cassandra_service_restart: True
 cassandra_service_enabled: yes
 cassandra_service_state: started
 
-# systemd workaround
+# systemd workaround (basically we don't use systemd)
+# we've been using /etc/init.d
+# https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/initialize/referenceStartCservice.html
 cassandra_systemd_enabled: False
 cassandra_systemd_path: "/etc/systemd/system/cassandra.service"
 cassandra_systemd_template: "systemd/system/cassandra.service.j2"
