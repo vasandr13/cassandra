@@ -1,6 +1,6 @@
 ---
 
-- name: Backup original main config file.
+- name: Backup original main configuration file cassandra.yaml
   copy:
     src: "{{ cassandra_configuration_file }}"
     dest: "{{ cassandra_configuration_file }}.backup"
