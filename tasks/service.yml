@@ -14,7 +14,7 @@
 
 # https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/initialize/referenceStartCservice.html
 
-- name: Ensure the Service is in the Required State (RedHat)
+- name: Ensure the Service is in the Required State (enabled and started) (RedHat)
   systemd:
     name: cassandra
     enabled: "{{ cassandra_service_enabled }}"
