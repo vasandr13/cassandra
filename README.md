@@ -1,6 +1,18 @@
 # Ansible Role for Installing and Configuring Cassandra Cluster.
 
-Ansible >= 2.9
+# Prerequisites:
+RedHat based OS.
+
+Ansible Version >= 2.9
+This one works fine:
+https://hub.docker.com/r/willhallonline/ansible
+
+Java (JDK) >= 8
+
+---shell
+sudo docker run --rm -it --entrypoint="" -v ${HOME}/ansible:/root/ansible:ro --name ${LOGNAME}_ansible willhallonline/ansible:2.9 ansible-playbook -i inventory.ini playbooks/cassandra.yml;
+---
+
 
 # Forked from:
 
