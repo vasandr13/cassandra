@@ -9,9 +9,8 @@ https://hub.docker.com/r/willhallonline/ansible
 
 Java (JDK) >= 8
 
----shell
 sudo docker run --rm -it --entrypoint="" -v ${HOME}/ansible:/root/ansible:ro --name ${LOGNAME}_ansible willhallonline/ansible:2.9 ansible-playbook -i inventory.ini playbooks/cassandra.yml;
----
+
 
 
 # Forked from:
