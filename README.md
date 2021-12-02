@@ -1,4 +1,6 @@
-# Role for Installing and Configuring Cassandra Cluster.
+# Ansible Role for Installing and Configuring Cassandra Cluster.
+
+Ansible >= 2.9
 
 # Forked from:
 
