@@ -12,7 +12,13 @@ Java (JDK) >= 8
 
 How to run:
 
+```shell
+sudo docker pull willhallonline/ansible;
+```
+
+```shell
 sudo docker run --rm -it --entrypoint="" -v ${HOME}/ansible:/root/ansible:ro --name ${LOGNAME}_ansible willhallonline/ansible:2.9 ansible-playbook -i inventory.ini playbooks/cassandra.yml;
+```
 
 
 
