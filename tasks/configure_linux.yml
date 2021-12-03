@@ -3,6 +3,14 @@
 # https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/install/installRecommendSettings.html
 
 
+- name: 
+  sysctl:
+    name: vm.swappiness
+    value: '0'
+    state: present
+    sysctl_file: "/etc/sysctl.d/cassandra.conf"
+    reload: yes
+
 - name: Disable SWAP
   shell:
     cmd: |
