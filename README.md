@@ -16,10 +16,6 @@ How to run:
 git clone https://github.com/vasandr13/cassandra.git;
 ```
 
-```shell
-cd cassandra;
-# add your hosts to inventory.ini
-```
 
 ```shell
 sudo docker pull willhallonline/ansible;
