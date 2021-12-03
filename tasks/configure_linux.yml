@@ -45,6 +45,10 @@
     - { limit_type: '-', limit_item: 'nproc', value: 32768 }
     - { limit_type: '-', limit_item: 'memlock', value: unlimited }
     - { limit_type: '-', limit_item: 'as', value: unlimited }
+    
+- name: Reload sysctl once again
+  sysctl:
+    reload: yes
 
 # - name: Reload Settings From All System Configuration Files
 #     shell: sysctl --system
