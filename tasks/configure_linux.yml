@@ -1,0 +1,26 @@
+---
+
+# https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/install/installRecommendSettings.html
+
+
+- name: Disable SWAP
+  shell:
+    cmd: |
+      swapoff --all
+  args:
+    executable: /bin/bash
+ 
+- name: Remove SWAP from /etc/fstab
+  mount:
+    name: swap
+    fstype: swap
+    state: absent
+
+- name: Set Recommended Linux Kernel Options
+  sysctl:
+    name: "{{ item.name }}"
+    value: "{{ item.value }}"
+    state: present
+    sysctl_file: "/etc/sysctl.d/cassandra.conf"
+    reload: yes
+  loop: "{{ cassandra_sysctl_vars }}"
