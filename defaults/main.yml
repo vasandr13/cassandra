@@ -26,6 +26,9 @@ cassandra_systemd_enabled: False
 cassandra_systemd_path: "/etc/systemd/system/cassandra.service"
 cassandra_systemd_template: "systemd/system/cassandra.service.j2"
 
+# sysctl
+cassandra_sysctl_file: "/etc/sysctl.d/cassandra.conf"
+
 # backlog, needs to be done
 cassandra_join_cluster: false
 
