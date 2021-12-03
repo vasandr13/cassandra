@@ -32,3 +32,26 @@
     sysctl_file: "{{ cassandra_sysctl_file }}"
     reload: yes
   loop: "{{ cassandra_sysctl_vars }}"
+  
+- name: Set Resource Limits for cassandra User
+  pam_limits:
+    domain: cassandra
+    dest: "{{ cassandra_limits_file }}"
+    limit_type: "{{ item.limit_type }}"
+    limit_item: "{{ item.limit_item }}"
+    value: "{{ item.value }}"
+    reload: yes
+  with_items:
+    - { limit_type: '-', limit_item: 'nofile', value: 100000 }
+    - { limit_type: '-', limit_item: 'nproc', value: 32768 }
+    - { limit_type: '-', limit_item: 'memlock', value: unlimited }
+    - { limit_type: '-', limit_item: 'as', value: unlimited }
+
+
+
+# - name: reload settings from all system configuration files
+#     shell: sysctl --system
+      
+      
+      
+      
