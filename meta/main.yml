@@ -2,11 +2,10 @@
 
 galaxy_info:
 
-  author: "Ben Dalling"
-  company: "League of Crafty Programmers Ltd"
+  author: "Andrey Vasilev"
   license: GPLv3
 
-  description: "Ansible Role to Install and Configure Apache Cassandra."
+  description: "Ansible Role to Install and Configure Apache Cassandra Cluster"
 
   role_name: cassandra
 
