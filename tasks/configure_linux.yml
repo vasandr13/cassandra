@@ -40,16 +40,13 @@
     limit_type: "{{ item.limit_type }}"
     limit_item: "{{ item.limit_item }}"
     value: "{{ item.value }}"
-    reload: yes
   with_items:
     - { limit_type: '-', limit_item: 'nofile', value: 100000 }
     - { limit_type: '-', limit_item: 'nproc', value: 32768 }
     - { limit_type: '-', limit_item: 'memlock', value: unlimited }
     - { limit_type: '-', limit_item: 'as', value: unlimited }
 
-
-
-# - name: reload settings from all system configuration files
+# - name: Reload Settings From All System Configuration Files
 #     shell: sysctl --system
       
       
