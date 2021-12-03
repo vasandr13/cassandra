@@ -47,7 +47,7 @@
     - { limit_type: '-', limit_item: 'as', value: unlimited }
     
 
-- name: Reload Settings From All System Configuration Files
+- name: Reload Settings For All System Configuration Files
   shell: sysctl --system
       
       
