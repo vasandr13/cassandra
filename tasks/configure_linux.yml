@@ -8,7 +8,7 @@
     name: vm.swappiness
     value: '0'
     state: present
-    sysctl_file: "/etc/sysctl.d/cassandra.conf"
+    sysctl_file: "{{ cassandra_sysctl_file }}"
     reload: yes
 
 - name: Disable SWAP
@@ -29,6 +29,6 @@
     name: "{{ item.name }}"
     value: "{{ item.value }}"
     state: present
-    sysctl_file: "/etc/sysctl.d/cassandra.conf"
+    sysctl_file: "{{ cassandra_sysctl_file }}"
     reload: yes
   loop: "{{ cassandra_sysctl_vars }}"
