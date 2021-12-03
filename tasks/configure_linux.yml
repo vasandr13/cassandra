@@ -48,7 +48,7 @@
     
 
 - name: Reload Settings From All System Configuration Files
-    shell: sysctl --system
+  shell: sysctl --system
       
       
       
