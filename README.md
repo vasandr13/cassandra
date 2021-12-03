@@ -1,4 +1,4 @@
-# Ansible Role for Installing and Configuring Cassandra Cluster.
+# Ansible Role for Installing and Configuring Apache Cassandra Cluster.
 
 # Prerequisites:
 RedHat based OS.
