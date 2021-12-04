@@ -9,9 +9,9 @@ cassandra_configuration_file: /etc/cassandra/default.conf/cassandra.yaml
 # https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/install/installRecommendSettings.html
 cassandra_sysctl_vars:
   #
-  - { name: net.ipv4.tcp_keepalive_time, value: 60 }
-  - { name: net.ipv4.tcp_keepalive_probes, value: 3 }
-  - { name: net.ipv4.tcp_keepalive_intvl, value: 10 }
+#   - { name: net.ipv4.tcp_keepalive_time, value: 60 }
+#   - { name: net.ipv4.tcp_keepalive_probes, value: 3 }
+#   - { name: net.ipv4.tcp_keepalive_intvl, value: 10 }
   #
   - { name: net.core.rmem_max, value: 16777216 }
   - { name: net.core.wmem_max, value: 16777216 }
