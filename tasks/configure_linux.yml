@@ -26,7 +26,7 @@
 
 - name: Disable SELINUX
   lineinfile:
-    path: /etc/selinux/config
+    path: "{{ cassandra_selinux_config }}"
     regexp: '^SELINUX='
     line: SELINUX=disabled
     
