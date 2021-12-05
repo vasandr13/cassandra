@@ -33,7 +33,7 @@ cassandra_sysctl_file: "/etc/sysctl.d/cassandra.conf"
 cassandra_limits_file: "/etc/security/limits.d/cassandra.conf"
 
 # selinux
-cassandra_selinux_config: "/etc/selinux/config"
+cassandra_selinux_file: "/etc/selinux/config"
 
 
 # backlog, needs to be done
