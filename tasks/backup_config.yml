@@ -3,7 +3,7 @@
 - name: Backup original main configuration file cassandra.yaml
   copy:
     src: "{{ cassandra_configuration_file }}"
-    dest: "{{ cassandra_configuration_file }}.backup"
+    dest: "{{ cassandra_configuration_file }}.{{ ansible_date_time.date }}-{{ ansible_date_time.hour }}-{{ ansible_date_time.minute }}.backup"
     remote_src: yes
     force: yes
   when:
