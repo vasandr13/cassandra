@@ -58,7 +58,7 @@
 - name: Reload Settings For All System Configuration Files
   shell: sysctl --system
   when:
-    - sysctl_reload_all_all|bool
+    - cassandra_sysctl_reload_all|bool
       
       
       
