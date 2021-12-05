@@ -7,42 +7,42 @@
   hosts: all
   
   vars:
-    cassandra_configuration:
-      commitlog_directory: /commitlog/cassandra/commitlog
-      data_file_directories: 
-        - /data/cassandra/data
-      hints_directory: /data/cassandra/hints
-      saved_caches_directory: /data/cassandra/saved_caches
+#     cassandra_configuration:
+#       commitlog_directory: /commitlog/cassandra/commitlog
+#       data_file_directories: 
+#         - /data/cassandra/data
+#       hints_directory: /data/cassandra/hints
+#       saved_caches_directory: /data/cassandra/saved_caches
       
-      cluster_name: columbia_new_123
-      commitlog_sync: periodic
-      commitlog_sync_period_in_ms: 10000
-      listen_address: "{{ ansible_default_ipv4.address }}"
-      rpc_address: "{{ ansible_default_ipv4.address }}"
-      num_tokens: 16
-      partitioner: org.apache.cassandra.dht.Murmur3Partitioner
-      endpoint_snitch: SimpleSnitch
+    cluster_name: columbia_new_123
+#       commitlog_sync: periodic
+#       commitlog_sync_period_in_ms: 10000
+#       listen_address: "{{ ansible_default_ipv4.address }}"
+#       rpc_address: "{{ ansible_default_ipv4.address }}"
+    num_tokens: 8
+#       partitioner: org.apache.cassandra.dht.Murmur3Partitioner
+#       endpoint_snitch: SimpleSnitch
       
       
-      seed_provider:
-        - class_name: "org.apache.cassandra.locator.SimpleSeedProvider"
-          parameters:
-            # This sets the seed to the first node in the Ansible group called
-            # cassandra.
-            - seeds: "{{ hostvars[groups['cassandra'][0]]['ansible_default_ipv4'].address }}"
-      start_native_transport: true
+#       seed_provider:
+#         - class_name: "org.apache.cassandra.locator.SimpleSeedProvider"
+#           parameters:
+#             # This sets the seed to the first node in the Ansible group called
+#             # cassandra.
+#             - seeds: "{{ hostvars[groups['cassandra'][0]]['ansible_default_ipv4'].address }}"
+#       start_native_transport: true
       
       # copy-paste from original cassandra.yaml file
-      hinted_handoff_enabled: true
-      max_hint_window_in_ms: 108000 # 3 hours
-      hinted_handoff_throttle_in_kb: 1024
-      max_hints_delivery_threads: 2
-      hints_flush_period_in_ms: 10000
-      max_hints_file_size_in_mb: 128
-      batchlog_replay_throttle_in_kb: 1024
-      authenticator: AllowAllAuthenticator
-      authorizer: AllowAllAuthorizer
-      role_manager: CassandraRoleManager
+#       hinted_handoff_enabled: true
+#       max_hint_window_in_ms: 108000 # 3 hours
+#       hinted_handoff_throttle_in_kb: 1024
+#       max_hints_delivery_threads: 2
+#       hints_flush_period_in_ms: 10000
+#       max_hints_file_size_in_mb: 128
+#       batchlog_replay_throttle_in_kb: 1024
+#       authenticator: AllowAllAuthenticator
+#       authorizer: AllowAllAuthorizer
+#       role_manager: CassandraRoleManager
      
       
     cassandra_directories:
