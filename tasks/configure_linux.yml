@@ -24,6 +24,12 @@
     fstype: swap
     state: absent
 
+- name: Disable SELINUX
+  lineinfile:
+    path: /etc/selinux/config
+    regexp: '^SELINUX='
+    line: SELINUX=disabled
+    
 - name: Set Recommended Linux Kernel Options
   sysctl:
     name: "{{ item.name }}"
