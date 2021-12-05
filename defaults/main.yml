@@ -32,6 +32,9 @@ cassandra_sysctl_file: "/etc/sysctl.d/cassandra.conf"
 # limits
 cassandra_limits_file: "/etc/security/limits.d/cassandra.conf"
 
+# selinux
+cassandra_selinux_config: "/etc/selinux/config"
+
 
 # backlog, needs to be done
 cassandra_join_cluster: false
