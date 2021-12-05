@@ -11,7 +11,7 @@
     sysctl_file: "{{ cassandra_sysctl_file }}"
     reload: yes
 
-- name: Disable SWAP
+- name: Disable SWAP swapoff -all
   shell:
     cmd: |
       swapoff --all
