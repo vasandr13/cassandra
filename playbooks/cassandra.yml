@@ -14,7 +14,7 @@
       hints_directory: /data/cassandra/hints
       saved_caches_directory: /data/cassandra/saved_caches
       
-      cluster_name: columbia
+      cluster_name: columbia_new_123
       commitlog_sync: periodic
       commitlog_sync_period_in_ms: 10000
       listen_address: "{{ ansible_default_ipv4.address }}"
