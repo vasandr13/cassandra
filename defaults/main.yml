@@ -28,6 +28,9 @@ cassandra_systemd_template: "systemd/system/cassandra.service.j2"
 
 # sysctl
 cassandra_sysctl_file: "/etc/sysctl.d/cassandra.conf"
+cassandra_sysctl_reload_all: False
+
+cassandra_swapoff_all: False
 
 # limits
 cassandra_limits_file: "/etc/security/limits.d/cassandra.conf"
