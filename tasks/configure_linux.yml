@@ -17,6 +17,8 @@
       swapoff --all
   args:
     executable: /bin/bash
+  when:
+    - cassandra_swapoff_all|bool
  
 - name: Remove SWAP from /etc/fstab
   mount:
@@ -55,6 +57,8 @@
 
 - name: Reload Settings For All System Configuration Files
   shell: sysctl --system
+  when:
+    - sysctl_reload_all_all|bool
       
       
       
