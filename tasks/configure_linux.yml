@@ -53,6 +53,8 @@
     - { limit_type: '-', limit_item: 'nproc', value: 32768 }
     - { limit_type: '-', limit_item: 'memlock', value: unlimited }
     - { limit_type: '-', limit_item: 'as', value: unlimited }
+  when:
+    - cassandra_limits_switch|bool
     
 
 - name: Reload Settings For All System Configuration Files
