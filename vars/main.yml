@@ -21,5 +21,6 @@ cassandra_sysctl_vars:
   - { name: net.ipv4.tcp_rmem, value: "4096 87380 16777216" }
   - { name: net.ipv4.tcp_wmem, value: "4096 65536 16777216" }
   - { name: vm.max_map_count, value: 1048575 }
+  - { name: vm.swappiness, value: 0 }
 
 
