@@ -18,7 +18,7 @@
   args:
     executable: /bin/bash
   when:
-    - cassandra_swapoff_all|bool
+    - cassandra_swapoff_switch|bool
  
 - name: Remove SWAP from /etc/fstab
   mount:
@@ -31,6 +31,8 @@
     path: "{{ cassandra_selinux_file }}"
     regexp: '^SELINUX='
     line: SELINUX=disabled
+  when:
+    - cassandra_selinux_switch|bool
     
 - name: Set Recommended Linux Kernel Options
   sysctl:
