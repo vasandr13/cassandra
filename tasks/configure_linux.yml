@@ -10,6 +10,8 @@
     state: present
     sysctl_file: "{{ cassandra_sysctl_file }}"
     reload: yes
+  when:
+    - cassandra_swappiness_switch|bool
 
 - name: Disable SWAP swapoff -all
   shell:
