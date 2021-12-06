@@ -31,6 +31,7 @@ cassandra_sysctl_reload_all: False
 
 # swap
 cassandra_swapoff_switch: False
+cassandra_swappiness_switch: False
 
 # limits
 cassandra_limits_file: "/etc/security/limits.d/cassandra.conf"
