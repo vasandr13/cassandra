@@ -52,3 +52,4 @@
     - {role: "cassandra", cassandra__action: "configure_cluster"}
     - {role: "cassandra", cassandra__action: "service"}    
     
+
