@@ -1,5 +1,6 @@
 ---
 
+# Ansible >= 2.9 required
 - name: Create Custom Directories for Cassandra
   file:
     group: "{{ directory.0.spec.group | default('cassandra') }}"
