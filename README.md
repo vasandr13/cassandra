@@ -31,7 +31,7 @@ sudo docker run --rm -it --entrypoint="" \
 
 
 
-# Forked from:
+# All kudos goes to:
 
 https://github.com/locp/ansible-role-cassandra
 
